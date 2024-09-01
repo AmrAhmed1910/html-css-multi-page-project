@@ -1,0 +1,249 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+#navbar {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+
+#navbar a {
+    display: inline-block;
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+#navbar a:hover {
+    background-color: #575757;
+}
+
+/* Content styling */
+.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Home page styling */
+.content img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* Hobbies page styling */
+.hobby {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.hobby img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hobby:hover {
+    transform: scale(1.1);
+}
+
+/* Birthday page styling */
+#initial-content img {
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+    animation: hideImage 0s forwards;
+    animation-delay: 5s;
+}
+
+#message-content {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    animation: showTextArea 1s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes showTextArea {
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes hideImage {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#message-content textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#message-content button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#message-content button:hover {
+    background-color: #575757;
+}
+
+/* Contact page styling */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #575757;
+}
+
+.social-media img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+/* Countries page styling */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation: slide 20s infinite;
+}
+
+.slide {
+    flex: 1 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.slide p {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+/* CV page styling */
+.content p {
+    margin: 10px 0;
+}
+
+.content p span {
+    font-weight: bold;
+}
+
+/* Thank you page styling */
+.content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
